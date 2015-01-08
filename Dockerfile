@@ -18,6 +18,7 @@ ENV GOPATH /root/workspace/diego-release
 ENV PATH /root/workspace/diego-release/bin:$PATH
 RUN git checkout develop && ./scripts/update
 
+RUN gem install --no-rdoc --no-ri bosh_cli
 RUN bosh create release
 
 CMD bash
