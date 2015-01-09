@@ -19,6 +19,6 @@ ENV PATH /root/workspace/diego-release/bin:$PATH
 RUN git checkout develop && ./scripts/update
 
 RUN gem install --no-rdoc --no-ri bosh_cli
-RUN bosh create release
+RUN bosh create release --name diego
 
 CMD bash
